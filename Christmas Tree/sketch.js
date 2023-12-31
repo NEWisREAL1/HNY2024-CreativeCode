@@ -23,6 +23,7 @@ function setup() {
 }
 
 function draw() {
+    translate(-32,0);
     let timeStep = millis();
     background('#99ccff');
     const w = width/2;
@@ -52,7 +53,7 @@ function draw() {
     noStroke();
     // shadow
     fill(200);
-    ellipse(width/2,height/2+160,350,80);
+    ellipse(w,h+160,350,80);
     fill(200);
     ellipse(w+140,h+175,200,80);
 
