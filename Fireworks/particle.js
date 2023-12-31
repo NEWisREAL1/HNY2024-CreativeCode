@@ -32,16 +32,25 @@ class Firework {
         this.size = size
         this.particles = [];
         this.num = num;
+        if (navigator.userAgent.match(/Android/i)
+         || navigator.userAgent.match(/webOS/i)
+         || navigator.userAgent.match(/iPhone/i)
+         || navigator.userAgent.match(/iPad/i)
+         || navigator.userAgent.match(/iPod/i)
+         || navigator.userAgent.match(/BlackBerry/i)
+         || navigator.userAgent.match(/Windows Phone/i)) {
+            if (this.num > 500) {
+                this.num = 200;
+            }
+            else {
+                this.num = random(20,50);
+            }
+        }
         this.hue = random(360);
         this.lifetimeSpeed = random(0.7,0.98);
         this.bursted = false;
         if (this.num > 500) { // for BigBANG!
-            if (window.innerWidth < 500) {
-                this.lifetime = 0.8;
-            }
-            else {
-                this.lifetimeSpeed = 0.98;
-            }
+            this.lifetimeSpeed = 0.98;
         }
     }
 
