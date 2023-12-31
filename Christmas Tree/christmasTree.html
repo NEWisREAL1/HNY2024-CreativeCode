@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        audio {
+            width: 300px;
+        }
+        .fixed {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 1rem;
+        }
+        button {
+            font-size: 2rem;
+            padding: 1rem;
+            border: none;
+            border-radius: 100%;
+            transition: all 0.2s linear;
+            cursor: pointer;
+            text-align: center;
+        }
+        #firework:hover {
+            background-color: rgb(236, 240, 157);
+        }
+        @media (max-width: 650px) {
+            audio {
+                width: auto;
+                height: 7vh;
+            }
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+
+    <title>Christmas Tree</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="fixed">
+        <a href="../Fireworks/firework.html">
+            <button id="firework">🎉</button>
+        </a>
+        <audio controls autoplay>
+            <source src="assets/bg-music.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+    </div>
+</body>
+</html>

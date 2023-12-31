@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            height: 100svh;
+            background-color: deepskyblue;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+        }
+        button {
+            font-size: 8rem;
+            padding: 5rem;
+            border: none;
+            border-radius: 100%;
+            transition: all 0.2s linear;
+            cursor: pointer;
+            text-align: center;
+        }
+        #christmas:hover {
+            background-color: rgb(144, 238, 144);
+            scale: 1.2;
+        }
+        #firework:hover {
+            background-color: rgb(236, 240, 157);
+            scale: 1.2;
+        }
+        @media (max-width: 768px) {
+            button {
+                font-size: 4rem;
+                padding: 2rem;
+            }
+        }
+        @media (max-width: 425px) {
+            body {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    </style>
+
+    <title>✨HAPPY NEW YEAR💝</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="Christmas Tree/christmasTree.html">
+        <button id="christmas">🎄</button>
+    </a>
+    <a href="Fireworks/firework.html">
+        <button id="firework">🎉</button>
+    </a>
+</body>
+</html>
