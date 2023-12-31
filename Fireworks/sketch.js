@@ -1,6 +1,8 @@
 let fireworks = [];
 let popSound;
 
+alert('Press or click the screen once if the sound effect doesn\'t load. 👌🏻');
+
 function newFirework(width, height) {
     let firework = new Firework(random(width/10, 9*width/10), random(5*height/10, 2*height/10), random(1,5));
     firework.addParticles();
