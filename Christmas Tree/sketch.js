@@ -50,9 +50,13 @@ function draw() {
     }
 
     noStroke();
+    // shadow
     fill(200);
     ellipse(width/2,height/2+160,350,80);
+    fill(200);
+    ellipse(w+140,h+175,200,80);
 
+    // tree
     fill(139,69,19);
     rect(width/2,height/2+100,50,100);
 
@@ -179,6 +183,46 @@ function draw() {
     rect(w-50,h+170,10,30);
     fill(180,200,20);
     rect(w-50,h+170,70,5);
+
+    // snowman
+    translate(20,20);
+    fill(240);
+    circle(w+120, h+120, 110);
+    fill(0);
+    circle(w+120, h+120, 12);
+    fill(250);
+    circle(w+120, h+60, 83);
+    fill(0);
+    circle(w+120, h+85, 12);
+    fill(0);
+    circle(w+120, h+50, 12);
+    fill(255);
+    circle(w+120, h-10, 70);
+    if (timeStep % 3000 < 100) {
+        stroke(0);
+        line(w+105, h-20, w+115, h-20);
+        line(w+125, h-20, w+135, h-20);
+    }
+    else {
+        fill(0);
+        circle(w+110, h-20, 5);
+        circle(w+130, h-20, 5);
+    }
+    noFill();
+    stroke(0);
+    arc(w+120,h,20,10,0,PI);
+    noStroke();
+    fill(255,100,100);
+    circle(w+120, h-10, 10);
+    fill(255,0,40);
+    rect(w+120, h+20, 50, 10);
+    fill(200,0,40);
+    rect(w+140, h+30, 10, 30);
+    fill(50)
+    rect(w+120, h-65, 40, 50);
+    fill(0)
+    rect(w+120, h-40, 60, 10);
+    
 }
 
 function windowResized() {
