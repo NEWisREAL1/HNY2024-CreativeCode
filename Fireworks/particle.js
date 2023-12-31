@@ -36,7 +36,12 @@ class Firework {
         this.lifetimeSpeed = random(0.7,0.98);
         this.bursted = false;
         if (this.num > 500) { // for BigBANG!
-            this.lifetimeSpeed = 0.98;
+            if (window.innerWidth < 500) {
+                this.lifetime = 0.8;
+            }
+            else {
+                this.lifetimeSpeed = 0.98;
+            }
         }
     }
 
